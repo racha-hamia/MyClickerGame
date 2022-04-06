@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Kings&display=swap');
+
+/**
+Global css styles
+**/
+*{
+    margin:0;
+    padding:0;
+}
+
+body,html
+{
+    width:100%;
+    height:100%;
+}
+
+body
+{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Kings', cursive;
+    color:white;
+    overflow: hidden;
+
+}
+.store{
+    display: flex;
+    width:100%;
+}
+
+/* left part */
+.leftContainer
+{
+    flex: 2;
+    display: flex;
+    flex-direction:column;
+}
+
+#banner  
+{
+    flex: 1;
+    max-height:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner h1 {font-size: 3em;}
+
+.gold,.gps {
+    display: flex;
+    flex-direction: row;
+    gap:3px;
+    font-size:2em;
+}
+
+#gameSection /*Game section*/
+{
+    width: 100%;
+    background-image: url('../images/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* right part */
+.rightContainer
+{
+    flex:1;
+    width: 100%;
+    max-height: 200px;
+    background-image: url('../images/bgflammes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    
+
+}
+
+.minion {
+    height: 200px;
+    width: 90%;
+    color: aliceblue;
+    background-image: url('../images/brickwall.jpg');
+    margin-left: 5px;
+    border-radius: 25px;
+    font-family: 'Kings', cursive;
+    font-size: 1em;
+    display:flex;
+
+}
+.subSection--1 
+{
+    height: 100%;
+    flex :1;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+.subSection--2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex :1;
+}
+.subSection--3 
+{
+    height: 100%;
+    flex :1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.subSection--1 p{font-size: 2em;}
+.subSection--2 p{font-size: 2em;}
+.subSection--3 p{font-size: 2em;}
+
+
+#newGameButton
+{
+    height: 200px;
+    width: 20%;
+    background-image: url('../images/brickwall.jpg');
+    margin-left: 5px;
+    border-radius: 25px;
+    font-family: 'Kings', cursive;
+    color: white;
+    font-size: 2.5em;
+}
+
+
+.minionPicture{
+    height: 100px;
+}
+
+
+/**rain css **/
+.iconRain--crazy
+{
+    background-image: url('../images/crazy.png');
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    display: block;
+    background-size: contain;
+}
+.iconRain--loony{
+    background-image: url('../images/loony.png');
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    display: block;
+    background-size: contain;
+}
+.iconRain--nuts{background-image: url('../images/nuts.png');
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    display: block;
+    background-size: contain;}
+
+.fa-tint {
+    position:absolute;
+    top:20px;
+    animation: fall linear forwards;
+    z-index:1;
+}
+@keyframes fall {
+    to{
+        
+        transform: translateY(105vh);
+    
+    }
+}
+
+a{
+    cursor: url('../images/m_punchCursor-2.png'), pointer!important; 
+    z-index: 2;
+    width:50%
+}
+#pushy 
+{
+    width:100%;
+    height:auto;
+}
+#banner
+{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    background-image: url('../images/flammes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+}
+
+/* somes responsives styles */
+
+@media screen and (min-width: 1px) and (max-width: 768px)
+{
+    /**rain css **/
+    .iconRain--crazy
+    {
+        height: 40px;
+        width: 40px;
+    }
+    .iconRain--loony{
+        height: 40px;
+        width: 40px;
+    }
+    .iconRain--nuts{
+        height: 40px;
+        width: 40px;
+    }
+    a{
+        width:70%;
+    }
+
+    .subSection--1 p{font-size: 1em;}
+    .subSection--2 p{font-size: 1em;}
+    .subSection--3 p{font-size: 1em;}
+}
+@media screen and (min-width: 1px) and (max-width: 425px)
+{
+        /**rain css **/
+        .iconRain--crazy
+        {
+            height: 40px;
+            width: 40px;
+        }
+        .iconRain--loony{
+            height: 40px;
+            width: 40px;
+        }
+        .iconRain--nuts{
+            height: 40px;
+            width: 40px;
+        }
+        .subSection--1{ display:flex; flex-direction: column;align-items: center;justify-content: center;}
+        .subSection--1 p{font-size: 0.5em;}
+        .subSection--2 p{font-size: 0.5em;}
+        .subSection--3 p{font-size: 0.5em;}
+        a{width:90%;}
+        .minionPicture{
+            height: 50px;
+        }
+        .minion {height: 100%;}
+        .subSection--1{border:none;}
+        .subSection--1 h2{font-size: 1em;}
+        #newGameButton
+        {
+            height: 100%;
+            width: 15%;
+            border-radius: 25px;
+            font-size: 1em;
+        }
+        .rightContainer{max-height: 100px;}
+}
